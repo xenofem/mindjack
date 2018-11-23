@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <style>
+      body {
+        background-color: black;
+      }
+      #logo {
+        height: 70px;
+        width: 70px;
+        margin-top: -35px;
+        margin-left: -35px;
+      }
+      #light {
+        width: 100%;
+        background: red;
+        box-shadow: 0 0 80px red, 0 0 30px FireBrick, 0 0 6px DarkRed;
+        height: 80px;
+        width: 80px;
+        margin-top: -40px;
+        margin-left: -40px;
+      }
+      .swing {
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        animation: swing 4s ease-in-out infinite, spin 2s linear infinite;
+      }
+      @keyframes swing {
+        0% {
+          left: 90%;
+        }
+        50% {
+          left: 10%;
+        }
+        100% {
+          left: 90%;
+        }
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fixation">
+      <div class="swing" id="light"></div>
+      <svg class="swing" id="logo" version='1.1' viewBox='0 -525 525 525' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+	<g id='page1'>
+	  <g transform='matrix(1 0 0 1 -43 133)'>
+	    <path d='M467.5 -395.5C467.5 -484.969 394.969 -557.5 305.5 -557.5S143.5 -484.969 143.5 -395.5S216.031 -233.5 305.5 -233.5S467.5 -306.031 467.5 -395.5Z' fill='none' stroke='#000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10.0375' stroke-width='20.075'/>
+	    <path d='M557.5 -395.5C557.5 -534.676 444.676 -647.5 305.5 -647.5S53.5 -534.676 53.5 -395.5C53.5 -256.324 166.324 -143.5 305.5 -143.5S557.5 -256.324 557.5 -395.5Z' fill='none' stroke='#000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10.0375' stroke-width='20.075'/>
+	    <path d='M305.5 -323.5L425.102 -530.652' fill='none' stroke='#000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10.0375' stroke-width='20.075'/>
+	    <path d='M465.602 -554.039C465.602 -568.953 453.516 -581.039 438.602 -581.039C423.691 -581.039 411.602 -568.953 411.602 -554.039C411.602 -539.129 423.691 -527.039 438.602 -527.039C453.516 -527.039 465.602 -539.129 465.602 -554.039Z' fill='none' stroke='#000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10.0375' stroke-width='20.075'/>
+	    <path d='M367.856 -431.5H128.652' fill='none' stroke='#000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10.0375' stroke-width='20.075'/>
+	    <path d='M88.148 -454.883C75.234 -447.426 70.812 -430.914 78.266 -418C85.723 -405.086 102.234 -400.66 115.148 -408.117C128.062 -415.574 132.488 -432.086 125.031 -445C117.578 -457.914 101.062 -462.34 88.148 -454.883Z' fill='none' stroke='#000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10.0375' stroke-width='20.075'/>
+	    <path d='M243.144 -431.5L362.746 -224.348' fill='none' stroke='#000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10.0375' stroke-width='20.075'/>
+	    <path d='M362.75 -177.578C375.664 -170.121 392.176 -174.547 399.633 -187.461C407.086 -200.375 402.664 -216.887 389.75 -224.344S360.32 -227.375 352.867 -214.461C345.41 -201.547 349.836 -185.035 362.75 -177.578Z' fill='none' stroke='#000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10.0375' stroke-width='20.075'/>
+	  </g>
+	</g>
+      </svg>
+    </div>
+  </body>
+</html>
