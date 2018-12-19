@@ -2,42 +2,57 @@
   <head>
     <style>
       body {
-        background-color: black;
+          background-color: black;
       }
       #logo {
-        height: 70px;
-        width: 70px;
+          height: 70px;
+          width: 70px;
       }
       #light {
-        background: red;
-        box-shadow: 0 0 80px red, 0 0 30px FireBrick, 0 0 6px DarkRed;
-        border-radius: 50%;
-        height: 80px;
-        width: 80px;
+          background: red;
+          box-shadow: 0 0 80px red, 0 0 30px FireBrick, 0 0 6px DarkRed;
+          border-radius: 50%;
+          height: 80px;
+          width: 80px;
       }
       .swing {
-        position: absolute;
-        top: 50%;
-        animation: swing 4s ease-in-out infinite, spin 2s linear infinite;
+          position: absolute;
+          top: 50%;
+          animation: swing 4s ease-in-out infinite, spin 2s linear infinite;
       }
       @keyframes swing {
-        0% {
-          left: 90%;
-        }
-        50% {
-          left: 10%;
-        }
-        100% {
-          left: 90%;
-        }
+          0% {
+              left: 90%;
+          }
+          50% {
+              left: 10%;
+          }
+          100% {
+              left: 90%;
+          }
       }
       @keyframes spin {
-        0% {
-          transform: translate(-50%, -50%) rotate(0deg);
-        }
-        100% {
-          transform: translate(-50%, -50%) rotate(360deg);
-        }
+          0% {
+              transform: translate(-50%, -50%) rotate(0deg);
+          }
+          100% {
+              transform: translate(-50%, -50%) rotate(360deg);
+          }
+      }
+
+      input[type=checkbox] {
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+      }
+      #controls {
+          display: none;
+          position: absolute;
+          bottom: 10px;
+          left: 10px;
+      }
+      input[type=checkbox]:checked ~ #controls {
+          display: block;
       }
     </style>
   </head>
@@ -59,5 +74,7 @@
 	</g>
       </svg>
     </div>
+    <input type="checkbox">
+    <div id="controls"><a href="..">back</a></div>
   </body>
 </html>
