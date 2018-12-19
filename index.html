@@ -3,23 +3,42 @@
     <link rel="manifest" href="manifest.webmanifest">
     <style>
       @font-face {
-        font-family: 'SansForgetica';
-	src: url('fonts/SansForgetica-Regular.otf');
+          font-family: 'Raleway';
+          src: url('fonts/Raleway-Regular.otf');
       }
       body {
-	background-color: black;
-	color: red;
-	font-family: 'SansForgetica';
-	text-align: center;
+          background-color: black;
+          color: red;
+          font-family: 'Raleway';
+          text-align: center;
       }
       a {
-	color: red;
+          color: red;
+      }
+      #footer {
+          margin-top: 3rem;
+      }
+      #footer img {
+          width: 40px;
+          height: 40px;
+      }
+      #footer h4 {
+          margin: 2px;
       }
     </style>
   </head>
   <body>
-    <h1>mindjack</h1>
-    <p><a href="follow/">follow</a></p>
-    <p><a href="colors/">colors</a></p>
+    <div id="header">
+      <h1>mindjack</h1>
+    </div>
+
+    <h2><a href="follow/">follow</a></h2>
+    <h2><a href="colors/">colors</a></h2>
+
+    <div id="footer">
+      <h4>a project by <a href="https://xeno.science">xenofem</a></h4>
+      <h4><a href="https://xeno.science"><img src="xeno.svg"></a></h4>
+      <h4><a href="https://github.com/xenofem/mindjack">source</a></h4>
+    </div>
   </body>
 </html>
