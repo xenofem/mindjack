@@ -2,23 +2,42 @@
   <head>
     <style>
       body {
-        background-color: black;
+          background-color: black;
       }
       #word {
-	font-size: 80px;
-	font-family: sans-serif;
-	font-weight: bold;
-	width: 100%;
-	text-align: center;
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
+          font-size: 80px;
+          font-family: sans-serif;
+          font-weight: bold;
+          width: 100%;
+          text-align: center;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          color: red;
+      }
+
+      #word img {
+          height: 100px;
+          width: 75px;
+      }
+
+      #controls {
+          position: absolute;
+          bottom: 10px;
+          left: 10px;
+      }
+      #controls img {
+          width: 40px;
+          height: 40px;
       }
     </style>
   </head>
   <body>
-    <div id="word"></div>
+    <div id="word"><img src="../play.svg"></div>
     <script type="text/javascript">
+      var started = false;
+      var showControls = false;
+
       var colorWords = ["red", "orange", "yellow", "green", "blue", "purple", "white"];
       var hypnoWords = ["sleep", "relax", "fall", "deeper", "trance"];
       var colors = ["red", "orange", "yellow", "green", "blue", "purple", "white"];
@@ -45,8 +64,22 @@
 	  wordEl.innerText = newWord;
 	  wordEl.style.color = newColor;
       }
-      setInterval(changeWord, 1000);
-      setInterval(function() { if (hypnoFrequency < hypnoIncrements) { hypnoFrequency++; } }, 5000);
+
+      window.onclick = function () {
+          if (!started) {
+              started = true;
+              document.getElementById("controls").style.display = "none";
+              changeWord();
+              setInterval(changeWord, 1000);
+              setInterval(function() { if (hypnoFrequency < hypnoIncrements) { hypnoFrequency++; } }, 5000);
+          } else {
+              document.getElementById("controls").style.display = showControls ? "none" : "block";
+              showControls = !showControls;
+          }
+      }
     </script>
+
+    <div id="controls"><a href=".."><img src="../back.svg"></a> <a href="."><img src="../reload.svg"></a></div>
+
   </body>
 </html>
